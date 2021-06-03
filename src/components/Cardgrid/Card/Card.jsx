@@ -5,7 +5,7 @@ import { makeStyles } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
     card: {
         width: '74%',
-        height: '600px',
+        height: '300px',
         margin: '5% auto',
         padding: '8%',
         paddingBottom: '3%',
@@ -15,9 +15,6 @@ const useStyles = makeStyles((theme) => ({
         '&:hover': {
             background: 'linear-gradient(145deg, #171a1e, #1c1f23)',
         },
-        [theme.breakpoints.down('lg')]: {
-            height: '500px'
-        }
     },
     cardcontainer: {
         height: '100%',
@@ -38,38 +35,37 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        height: '100px',
-        width: '100px',
+        height: '45px',
+        width: '45px',
         borderRadius: '50%',
         background: '#1A1D21',
-        boxShadow:  'inset 17px 17px 42px #0a0c0d, inset -17px -17px 42px #2a2e35',
+        boxShadow:  'inset 10px 10px 23px #0a0c0d, inset -10px -10px 23px #2a2e35',
         marginRight: '5%',
-        [theme.breakpoints.down('lg')]: {
-            height: '80px',
-            width: '80px',
-        }
     },
     dot: {
         height: 'fit-content',
-        width: 'fit-content',              
+        width: 'fit-content'              
     },
     cardtitle: {
         color: '#646464',
         fontWeight: '600',
-        fontSize: '300%',
+        fontSize: '150%',
         fontFamily: 'Montserrat',
         marginBottom: '20px',
-        [theme.breakpoints.down('lg')]: {
-            fontSize: '200%',
+        [theme.breakpoints.down('md')]:{
+            fontSize: '120%'
+        },
+        [theme.breakpoints.down('sm')]:{
+            fontSize: '110%'
         }
     },
     cardtext: {
         color: '#646464',
         fontWeight: '300',
         fontFamily: 'Montserrat',
-        fontSize: '200%',
-        [theme.breakpoints.down('lg')]: {
-            fontSize: '170%',
+        fontSize: '100%',
+        [theme.breakpoints.down('sm')]:{
+            fontSize: '97%'
         }
     },
     buttonGrid:{
@@ -82,19 +78,16 @@ const useStyles = makeStyles((theme) => ({
         width: 'fit-content',
         margin: 'auto',
         padding: '5%',
-        paddingLeft: '10%',
-        paddingRight: '10%',
+        paddingLeft: '7.5%',
+        paddingRight: '7.5%',
         fontFamily: 'Montserrat',
-        fontSize: '220%',
+        fontSize: '110%',
         fontWeight: '800',
-        borderRadius: '88px',
-        boxShadow:  '16px 16px 39px #0f1012, -16px -16px 39px #252a30',
+        borderRadius: '36px',
+        boxShadow:  '18px 18px 36px #0f1113, -18px -18px 36px #25292f',
         '&:hover': {
-            boxShadow:  '24px 24px 48px #0a0c0d, -24px -24px 48px #2a2e35',
+            boxShadow:  '20px 20px 40px #111316, -20px -20px 40px #23272c',
         },
-        [theme.breakpoints.down('lg')]: {
-            fontSize: '180%',
-        }
     }
 }), {index: 1})
 
@@ -105,7 +98,7 @@ function Card( { title, color } ) {
             <Grid container className={classes.cardcontainer}>
                 <Grid item className={classes.carddata} xs={12}>
                     <div className={classes.cardheader}>
-                        <div className={classes.circle}><i className={`fas fa-circle fa-3x ${classes.dot}`} style={{color: color}}></i></div>
+                        <div className={classes.circle}><i className={`fas fa-circle fa-md ${classes.dot}`} style={{color: color}}></i></div>
                         <Typography className={classes.cardtitle}>{title}</Typography>
                     </div>
                     <Typography className={classes.cardtext}>{"Lorem ipsum something is here. Something else will come here. Oh yes it will come"}</Typography>

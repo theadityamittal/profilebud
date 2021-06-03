@@ -9,16 +9,22 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'space-around',
         alignItems: 'center',
         height: '60vh',
-        width: '100%',      
+        width: '100%',     
+        [theme.breakpoints.down('sm')]:{
+            height: '55vh',
+        }, 
     },
     headtext: {
         fontFamily: 'Montserrat',
         color: '#FFF',
         fontWeight: '800',
-        fontSize: '450%',
+        fontSize: '250%',
         textAlign: 'center',
-        [theme.breakpoints.down('lg')]: {
-            fontSize: '370%',
+        [theme.breakpoints.down('md')]:{
+            fontSize: '200%',
+        },
+        [theme.breakpoints.down('sm')]:{
+            fontSize: '150%',
         }
     },
     subtext: {
@@ -28,28 +34,39 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
         paddingLeft: '15%',
         paddingRight: '15%',
-        [theme.breakpoints.down('lg')]: {
-            fontSize: '250%',
+        fontSize: '152%',
+        maxWidth: '600px',
+        [theme.breakpoints.down('md')]:{
+            fontSize: '120%',
+        },
+        [theme.breakpoints.down('sm')]:{
+            fontSize: '100%',
         }
     },
     headbutton: {
         fontFamily: 'Montserrat',
         color: '#FFB027',
-        fontSize: '250%',
+        fontSize: '130%',
         fontWeight: '800',
         textAlign: 'center',    
-        padding: '2%',
-        paddingLeft: '6%',
-        paddingRight: '6%',
-        borderRadius: '90px',
+        padding: '1.5%',
+        paddingLeft: '3.5%',
+        paddingRight: '3.5%',
+        borderRadius: '48px',
         background: '#1A1D21',
-        boxShadow:  '21px 21px 42px #0e0f11, -21px -21px 42px #262b31',
+        boxShadow:  '10px 10px 20px #111315, -10px -10px 20px #23272d',
         '&:hover': {
-            boxShadow:  '26px 26px 52px #0a0c0d, -26px -26px 52px #2a2e35',
+            boxShadow:  '18px 18px 36px #111315, -18px -18px 36px #23272d',
             background: '#1A1D21',
         },
-        [theme.breakpoints.down('lg')]: {
-            fontSize: '200%',
+        [theme.breakpoints.down('md')]:{
+            fontSize: '110%',
+        },
+        [theme.breakpoints.down('sm')]:{
+            fontSize: '100%',
+            padding: '4%',
+            paddingLeft: '6%',
+            paddingRight: '6%',
         }
     }
 }), {index: 1})
@@ -59,7 +76,7 @@ function Header() {
     return (
         <Container maxWidth="xl" className={classes.header}>
             <Typography className={classes.headtext}>{"We Extract Leads & Data From Instagram"}</Typography>
-            <Typography className={classes.subtext} variant='h3' >{`Our agency does all the hardwork and gives you the clean targeted data in Sheets!`}</Typography>
+            <Typography className={classes.subtext}>{`Our agency does all the hardwork and gives you the clean targeted data in Sheets!`}</Typography>
             <Button className={classes.headbutton} variant='button' >{"Get Leads"}</Button>            
         </Container>
     )

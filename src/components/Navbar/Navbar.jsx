@@ -16,10 +16,10 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center'
     },
     logo: {
-        height: '130px',
+        height: '60px',
         fontFamily: 'Montserrat',
-        [theme.breakpoints.down('lg')]: {
-            height: '110px'
+        [theme.breakpoints.down('sm')]: {
+            height: '40px'
         }
     },
     links: {
@@ -31,31 +31,35 @@ const useStyles = makeStyles((theme) => ({
         marginRight: '10%',
         fontWeight: '600',
         color: '#FFB027',
-        fontSize: '33px',
-        [theme.breakpoints.down('lg')]: {
-            fontSize: '28px'
+        fontSize: '18px',
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '13px'
         }
     },
     checkout: {
         display: 'flex',
-        height: '130px',
-        width: '130px',
+        height: '60px',
+        width: '60px',
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: '50%',
-        boxShadow:  '10px 10px 21px #141619, -10px -10px 21px #212429',
+        borderRadius: '30px',
+        boxShadow:  '6px 6px 12px #121417, -6px -6px 12px #22262b',
         '&:hover': {
-            boxShadow: '16px 16px 32px #0a0c0d, -16px -16px 32px #2a2e35'
+            boxShadow: '10px 10px 20px #101214, -10px -10px 20px #24282e'
         },
-        [theme.breakpoints.down('lg')]: {
-            height: '110px',
-            width: '110px',
+        [theme.breakpoints.down('sm')]: {
+            height: '34px',
+            borderRadius: '20px',
+            boxShadow:  '7px 7px 14px #0a0c0d, -7px -7px 14px #2a2e35',
+            '&:hover': {
+                boxShadow: '9px 9px 18px #0a0c0d, -9px -9px 18px #2a2e35'
+            },
         }
     },
     carticon: {
-        height: '50px',
-        [theme.breakpoints.down('lg')]: {
-            height: '40px'
+        height: '20px',
+        [theme.breakpoints.down('sm')]: {
+            height: '12px'
         }
     },
 }), {index: 1})

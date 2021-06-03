@@ -5,22 +5,21 @@ import { makeStyles } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
     subscontainer: {
         width: '80%',
-        height: '1000px',
+        height: '500px',
         margin: 'auto',
         marginTop: '7%',
         marginBottom: '9%',
-        [theme.breakpoints.down('lg')]: {
+        [theme.breakpoints.down('sm')]:{
             height: 'auto'
-        },
+        }
     },
     substext: {
         fontFamily: 'Montserrat',
         fontWeight: '300',
-        fontSize: '240%',
+        fontSize: '120%',
         color: '#646464',
-        [theme.breakpoints.down('lg')]: {
-            fontSize: '170%',
-            textAlign: 'center'
+        [theme.breakpoints.down('md')]:{
+            fontSize: '100%'
         },
     },
     subscard:{
@@ -29,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
         justifyContent: 'space-between',
         alignItems: 'center',
         height: '85%',
+        minHeight: '200px',
         width: '80%',
         padding: '5%',
         margin: '0% auto',
@@ -38,15 +38,15 @@ const useStyles = makeStyles((theme) => ({
         '&:hover': {
             background: 'linear-gradient(145deg, #171a1e, #1c1f23)'
         },
-        [theme.breakpoints.down('lg')]: {
-            height: '500px'
-        },
     },
     subscardtitle: {
         color: '#fff',
-        fontSize: '300%',
-        [theme.breakpoints.down('lg')]: {
-            fontSize: '230%'
+        fontSize: '150%',
+        [theme.breakpoints.down('md')]:{
+            fontSize: '120%'
+        },
+        [theme.breakpoints.down('sm')]:{
+            fontSize: '90%'
         }
     },
     input: {
@@ -55,9 +55,9 @@ const useStyles = makeStyles((theme) => ({
         alignItems: 'center',
         width: '70%',
         margin: 'auto',
-        height: '50px',
+        height: '25px',
         padding: '4%',
-        border: '15px solid #1a1d21',
+        border: '8px solid #1a1d21',
         borderRadius: '100px',
         background: '#1a1d21',
         boxShadow:  '33px 33px 66px #0e1012, -33px -33px 66px #262a30, inset 12px 12px 24px #0e1012, inset -12px -12px 24px #262a30',
@@ -70,7 +70,7 @@ const useStyles = makeStyles((theme) => ({
         border: 'none',
         fontFamily: 'Montserrat',
         fontWeight: '300',
-        fontSize: '240%',
+        fontSize: '120%',
         color: '#FFB027',
         textTransform: 'uppercase',
         padding: '5%',
@@ -78,15 +78,21 @@ const useStyles = makeStyles((theme) => ({
         '&:placeholder': {
             color: '#646464'
         },
-        [theme.breakpoints.down('lg')]: {
-            fontSize: '150%'
+        [theme.breakpoints.down('md')]:{
+            fontSize: '90%'
         },
+        [theme.breakpoints.down('sm')]:{
+            fontSize: '70%'
+        }
     },
     price: {
         color: '#fff',
-        fontSize: '1000%',
-        [theme.breakpoints.down('lg')]: {
-            fontSize: '600%'
+        fontSize: '500%',
+        [theme.breakpoints.down('md')]:{
+            fontSize: '300%'
+        },
+        [theme.breakpoints.down('sm')]:{
+            fontSize: '200%'
         }
     },
     rates: {
@@ -94,17 +100,18 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'column',
         justifyContent: 'space-between',
         height: '100%',
-        [theme.breakpoints.down('lg')]: {
-            alignItems: 'center'
-        },
+        [theme.breakpoints.down('sm')]:{
+            alignItems: 'center',
+            textAlign: 'center'
+        }
     },
     toyellow: {
         color: '#FFB027',
     },
     tobold: {
-        fontWeight: '600'
+        fontWeight: '800'
     },
-    toupperase: {
+    touppercase: {
         textTransform: 'uppercase'
     }
 }), {index: 1})
@@ -114,7 +121,7 @@ function Subscription() {
 
     return (
         <Grid container className={classes.subscontainer} spacing={10}>
-            <Grid item  xs={12} lg={8}>
+            <Grid item  xs={12} md={7}>
                 <div className={classes.subscard}>
                     <Typography className={`${classes.tobold} ${classes.substext} ${classes.touppercase} ${classes.subscardtitle}`}>Number of Accounts</Typography>
                     <div className={classes.input}>
@@ -123,7 +130,7 @@ function Subscription() {
                     <Typography className={`${classes.tobold} ${classes.substext} ${classes.touppercase} ${classes.price}`}>$0.00</Typography>
                 </div>
             </Grid>
-            <Grid item xs={12} lg={4}>
+            <Grid item xs={12} md={5}>
                 <div className={classes.rates}>
                     <Typography className={`${classes.touppercase} ${classes.toyellow} ${classes.substext}`}>Try it Free</Typography>
                     <div>
@@ -139,7 +146,7 @@ function Subscription() {
                         <Typography className={classes.substext}>over 1,000,000</Typography>
                     </div>
                     <Typography className={`${classes.toyellow} ${classes.substext}`}>Contact Us</Typography>
-                    <Typography className={`${classes.touppercase} ${classes.substext} ${classes.tobold} ${classes.yellow}`}>Learn More About Enterprise</Typography>
+                    <Typography className={`${classes.touppercase} ${classes.substext} ${classes.tobold} ${classes.toyellow}`}>Learn More About Enterprise</Typography>
                 </div>
             </Grid>
         </Grid>

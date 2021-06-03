@@ -34,7 +34,7 @@ function Cardgrid() {
     return (
         <Grid className={classes.cardgrid} container spacing={5}>
             {cards.map((card) => (
-                <Grid item xs={12} lg={6}>
+                <Grid item xs={12} md={6}>
                     <Card title={card.title} color={card.color}/>
                 </Grid>
             ))}
