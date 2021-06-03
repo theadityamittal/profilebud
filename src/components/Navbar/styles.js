@@ -24,7 +24,7 @@ export default makeStyles((theme) => ({
         marginRight: '10%',
         fontWeight: '600',
         color: '#FFB027',
-        fontSize: '30px'
+        fontSize: '33px'
     },
     checkout: {
         display: 'flex',
