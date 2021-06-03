@@ -7,7 +7,7 @@ function Subscription() {
 
     return (
         <Grid container className={classes.container} spacing={10}>
-            <Grid item  xs={6} sm={8}>
+            <Grid item  xs={12} lg={8}>
                 <div className={classes.subscard}>
                     <Typography className={`${classes.bold} ${classes.text} ${classes.uppercase} ${classes.cardtitle}`}>Number of Accounts</Typography>
                     <div className={classes.input}>
@@ -17,7 +17,7 @@ function Subscription() {
                     <Typography className={`${classes.bold} ${classes.text} ${classes.uppercase} ${classes.price}`}>$0.00</Typography>
                 </div>
             </Grid>
-            <Grid item xs={6} sm={4}>
+            <Grid item xs={12} lg={4}>
                 <div className={classes.rates}>
                     <Typography className={`${classes.uppercase} ${classes.yellow} ${classes.text}`}>Try it Free</Typography>
                     <div>

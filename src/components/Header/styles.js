@@ -7,15 +7,20 @@ export default makeStyles((theme) => ({
         justifyContent: 'space-around',
         alignItems: 'center',
         height: '60vh',
-        width: '100%',
-        
+        width: '100%',  
+        [theme.breakpoints.down('md')]: {
+            height: '70vh'
+        }      
     },
     headtext: {
         fontFamily: 'Montserrat',
         color: '#FFF',
         fontWeight: '800',
         fontSize: '450%',
-        textAlign: 'center'
+        textAlign: 'center',
+        [theme.breakpoints.down('lg')]: {
+            fontSize: '370%',
+        }
     },
     subtext: {
         fontFamily: 'Montserrat',
@@ -23,7 +28,10 @@ export default makeStyles((theme) => ({
         fontWeight: '600',
         textAlign: 'center',
         paddingLeft: '15%',
-        paddingRight: '15%'
+        paddingRight: '15%',
+        [theme.breakpoints.down('lg')]: {
+            fontSize: '250%',
+        }
     },
     button: {
         fontFamily: 'Montserrat',
@@ -40,6 +48,9 @@ export default makeStyles((theme) => ({
         '&:hover': {
             boxShadow:  '26px 26px 52px #0a0c0d, -26px -26px 52px #2a2e35',
             background: '#1A1D21',
+        },
+        [theme.breakpoints.down('lg')]: {
+            fontSize: '200%',
         }
     }
 }))
