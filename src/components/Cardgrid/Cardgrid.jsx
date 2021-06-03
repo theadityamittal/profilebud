@@ -1,7 +1,14 @@
 import { Grid } from '@material-ui/core'
 import React from 'react'
 import Card from './Card/Card'
-import useStyles from './styles'
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles((theme) => ({
+    cardgrid: {
+        width: '80%',
+        margin: 'auto'        
+    }
+}), {index: 1})
 
 const cards = [
     {
