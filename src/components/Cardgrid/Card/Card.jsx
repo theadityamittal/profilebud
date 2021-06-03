@@ -57,6 +57,9 @@ const useStyles = makeStyles((theme) => ({
         },
         [theme.breakpoints.down('sm')]:{
             fontSize: '110%'
+        },
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '100%'
         }
     },
     cardtext: {
@@ -66,6 +69,9 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '100%',
         [theme.breakpoints.down('sm')]:{
             fontSize: '97%'
+        },
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '90%'
         }
     },
     buttonGrid:{
@@ -88,6 +94,12 @@ const useStyles = makeStyles((theme) => ({
         '&:hover': {
             boxShadow:  '20px 20px 40px #111316, -20px -20px 40px #23272c',
         },
+        [theme.breakpoints.down('sm')]: {
+            fontSize: '100%'
+        },
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '90%'
+        }
     }
 }), {index: 1})
 

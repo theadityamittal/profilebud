@@ -20,6 +20,9 @@ const useStyles = makeStyles((theme) => ({
         fontFamily: 'Montserrat',
         [theme.breakpoints.down('sm')]: {
             height: '40px'
+        },
+        [theme.breakpoints.down('xs')]: {
+            height: '35px'
         }
     },
     links: {
@@ -34,6 +37,9 @@ const useStyles = makeStyles((theme) => ({
         fontSize: '18px',
         [theme.breakpoints.down('sm')]: {
             fontSize: '13px'
+        },
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '11px'
         }
     },
     checkout: {
@@ -48,12 +54,17 @@ const useStyles = makeStyles((theme) => ({
             boxShadow: '10px 10px 20px #101214, -10px -10px 20px #24282e'
         },
         [theme.breakpoints.down('sm')]: {
-            height: '34px',
+            height: '40px',
+            width: '40px',
             borderRadius: '20px',
             boxShadow:  '7px 7px 14px #0a0c0d, -7px -7px 14px #2a2e35',
             '&:hover': {
                 boxShadow: '9px 9px 18px #0a0c0d, -9px -9px 18px #2a2e35'
             },
+        },
+        [theme.breakpoints.down('xs')]: {
+            height: '35px',
+            width: '35px',
         }
     },
     carticon: {

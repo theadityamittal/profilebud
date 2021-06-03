@@ -47,6 +47,9 @@ const useStyles = makeStyles((theme) => ({
         },
         [theme.breakpoints.down('sm')]:{
             fontSize: '90%'
+        },
+        [theme.breakpoints.down('xs')]:{
+            fontSize: '70%'
         }
     },
     input: {
