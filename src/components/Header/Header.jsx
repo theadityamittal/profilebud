@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
             fontSize: '250%',
         }
     },
-    button: {
+    headbutton: {
         fontFamily: 'Montserrat',
         color: '#FFB027',
         fontSize: '250%',
@@ -60,7 +60,7 @@ function Header() {
         <Container maxWidth="xl" className={classes.header}>
             <Typography className={classes.headtext}>{"We Extract Leads & Data From Instagram"}</Typography>
             <Typography className={classes.subtext} variant='h3' >{`Our agency does all the hardwork and gives you the clean targeted data in Sheets!`}</Typography>
-            <Button className={classes.button} variant='button' >{"Get Leads"}</Button>            
+            <Button className={classes.headbutton} variant='button' >{"Get Leads"}</Button>            
         </Container>
     )
 }
