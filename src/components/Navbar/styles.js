@@ -33,7 +33,10 @@ export default makeStyles((theme) => ({
         alignItems: 'center',
         justifyContent: 'center',
         borderRadius: '50%',
-        boxShadow:  '10px 10px 21px #141619, -10px -10px 21px #212429'
+        boxShadow:  '10px 10px 21px #141619, -10px -10px 21px #212429',
+        '&:hover': {
+            boxShadow: '16px 16px 32px #0a0c0d, -16px -16px 32px #2a2e35'
+        }
     },
     carticon: {
         height: '50px'

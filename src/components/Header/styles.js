@@ -36,6 +36,10 @@ export default makeStyles((theme) => ({
         paddingRight: '6%',
         borderRadius: '90px',
         background: '#1A1D21',
-        boxShadow:  '21px 21px 42px #0e0f11, -21px -21px 42px #262b31'
+        boxShadow:  '21px 21px 42px #0e0f11, -21px -21px 42px #262b31',
+        '&:hover': {
+            boxShadow:  '26px 26px 52px #0a0c0d, -26px -26px 52px #2a2e35',
+            background: '#1A1D21',
+        }
     }
 }))

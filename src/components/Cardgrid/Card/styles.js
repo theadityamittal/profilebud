@@ -10,6 +10,9 @@ export default makeStyles((theme) => ({
         backgroundColor: '#1A1D21',
         borderRadius: '37px',
         boxShadow:  '16px 16px 27px #0e1012, -16px -16px 27px #262a30',
+        '&:hover': {
+            background: 'linear-gradient(145deg, #171a1e, #1c1f23)',
+        }
     },
     cardcontainer: {
         height: '100%',
@@ -66,11 +69,13 @@ export default makeStyles((theme) => ({
         padding: '5%',
         paddingLeft: '10%',
         paddingRight: '10%',
-        textTransform: 'uppercase',
         fontFamily: 'Montserrat',
         fontSize: '220%',
         fontWeight: '800',
         borderRadius: '88px',
-        boxShadow:  '16px 16px 39px #0f1012, -16px -16px 39px #252a30'
+        boxShadow:  '16px 16px 39px #0f1012, -16px -16px 39px #252a30',
+        '&:hover': {
+            boxShadow:  '24px 24px 48px #0a0c0d, -24px -24px 48px #2a2e35',
+        }
     }
 }))

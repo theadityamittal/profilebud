@@ -1,4 +1,4 @@
-import { Grid, Typography } from '@material-ui/core';
+import { Button, Grid, Typography } from '@material-ui/core';
 import React from 'react';
 import useStyles from './styles';
 
@@ -15,9 +15,9 @@ function Card( { title, color } ) {
                     <Typography className={classes.text}>{"Lorem ipsum something is here. Something else will come here. Oh yes it will come"}</Typography>
                 </Grid>
                 <Grid item className={classes.buttonGrid} xs={12}>
-                    <div className={classes.button} style={{color: color}}>
+                    <Button className={classes.button} style={{color: color}}>
                         Sample Data
-                    </div>
+                    </Button>
                 </Grid>
             </Grid>
         </div>
